@@ -1,2 +1,2 @@
-# low-power-cnn-accelerater
+# Low-power-cnn-accelerater
 FPGA implementation of Systolic array based low power CNN accelerator
