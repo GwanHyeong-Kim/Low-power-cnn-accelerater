@@ -60,17 +60,18 @@ Google Colab에서 학습한 weight를 실제 FPGA 환경에서 적용해 **손�
 Colab에서 MNIST 데이터셋을 기반으로 CNN 모델을 학습하여 weight를 확보한 뒤,  
 해당 모델 구조를 **Verilog RTL로 변환**하여 FPGA에서 구동 가능하도록 설계하였습니다.
 
-> CNN Architecture (Colab)
-![image](attachment:75bd6a4e-4002-4cd2-86f8-146e81341079:image.png)
+> CNN Architecture 
+<img width="534" height="158" alt="스크린샷 2025-11-21 001513" src="https://github.com/user-attachments/assets/ce7b8057-09cb-4855-acb5-cd328b5a4fcf" />
 
 ---
 
 ## 🔧 2) System Architecture (Block Diagram)
+<img width="428" height="236" alt="스크린샷 2025-11-21 001623" src="https://github.com/user-attachments/assets/73e545b3-1f9d-4a94-884b-f0887ce17d0a" />
 
 Colab에서 학습된 weight와 애플리케이션 입력 이미지는 PS에서 PL로 AXI4-Lite를 통해 전달되고,  
 PL은 CNN 연산을 수행한 뒤 결과를 다시 PS로 반환합니다.
+<img width="428" height="236" alt="스크린샷 2025-11-21 001623" src="https://github.com/user-attachments/assets/7bb25fc2-ab9b-43bf-a97e-7121211f9d8f" />
 
-![image](attachment:57c10d86-1760-4fee-9a0e-f5eb1191855d:image.png)
 
 ---
 
@@ -81,16 +82,17 @@ CNN Convolution 연산은 PL에서 **Systolic Array** 방식으로 수행되며,
 - Input Stationary (IS)
 
 두 가지 데이터 흐름 구조를 조합하여 PE 간 데이터 이동을 최소화하고 연산 효율을 극대화했습니다.
+<img width="539" height="244" alt="스크린샷 2025-11-21 001702" src="https://github.com/user-attachments/assets/6135cf4d-eb39-40f9-a51c-7e9b0ca81ed7" />
 
-![image](attachment:0839d719-1703-41b2-ab71-a57382886bff:image.png)
+
 
 ---
 
 # 🎯 주요 기능 및 성능 결과
 
 ## ✔ FPGA Implementation Result
+<img width="543" height="284" alt="스크린샷 2025-11-21 001712" src="https://github.com/user-attachments/assets/be2e775d-d459-47d4-8e39-e1b2e3dffa7b" />
 
-![image](attachment:f4f01a87-8a86-444b-8044-2c5f0fcd15b4:image.png)
 
 - **정확도:** MNIST 기준 **96.7% 달성**  
 - **속도:** ARM Cortex-A9 대비 **1.7× 빠른 추론 성능**  
@@ -100,7 +102,8 @@ CNN Convolution 연산은 PL에서 **Systolic Array** 방식으로 수행되며,
 
 ## ✔ 손글씨 인식 Application 개발
 
-![image](attachment:d9ce8ee2-d984-4be9-b999-5c51e27cd2e7:image.png)
+<img width="430" height="299" alt="스크린샷 2025-11-21 001722" src="https://github.com/user-attachments/assets/20f295e7-b085-4ee6-9651-fa1f9a9453ba" />
+
 
 사용자가 숫자를 그리면  
 → PS가 image data를 PL로 전달  
@@ -109,7 +112,7 @@ CNN Convolution 연산은 PL에서 **Systolic Array** 방식으로 수행되며,
 
 ---
 
-## 🏆 수상 실적
+## 🏆 수상 
 본 프로젝트로 **반도체전공트랙 성과발표회 최우수상**을 수상하였습니다.
 
 ---
