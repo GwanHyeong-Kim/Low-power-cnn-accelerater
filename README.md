@@ -72,7 +72,6 @@ Colab에서 MNIST 데이터셋을 기반으로 CNN 모델을 학습하여 weight
 
 Colab에서 학습된 weight와 애플리케이션 입력 이미지는 PS에서 PL로 AXI4-Lite를 통해 전달되고,  
 PL은 CNN 연산을 수행한 뒤 결과를 다시 PS로 반환합니다.
-<img width="428" height="236" alt="스크린샷 2025-11-21 001623" src="https://github.com/user-attachments/assets/7bb25fc2-ab9b-43bf-a97e-7121211f9d8f" />
 
 
 ---
