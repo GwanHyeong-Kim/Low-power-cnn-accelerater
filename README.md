@@ -60,12 +60,14 @@ Google Colab에서 학습한 weight를 실제 FPGA 환경에서 적용해 **손�
 Colab에서 MNIST 데이터셋을 기반으로 CNN 모델을 학습하여 weight를 확보한 뒤,  
 해당 모델 구조를 **Verilog RTL로 변환**하여 FPGA에서 구동 가능하도록 설계하였습니다.
 
-> CNN Architecture 
+> CNN Architecture
+
 <img width="534" height="158" alt="스크린샷 2025-11-21 001513" src="https://github.com/user-attachments/assets/ce7b8057-09cb-4855-acb5-cd328b5a4fcf" />
 
 ---
 
 ## 🔧 2) System Architecture (Block Diagram)
+
 <img width="428" height="236" alt="스크린샷 2025-11-21 001623" src="https://github.com/user-attachments/assets/73e545b3-1f9d-4a94-884b-f0887ce17d0a" />
 
 Colab에서 학습된 weight와 애플리케이션 입력 이미지는 PS에서 PL로 AXI4-Lite를 통해 전달되고,  
@@ -91,6 +93,7 @@ CNN Convolution 연산은 PL에서 **Systolic Array** 방식으로 수행되며,
 # 🎯 주요 기능 및 성능 결과
 
 ## ✔ FPGA Implementation Result
+
 <img width="543" height="284" alt="스크린샷 2025-11-21 001712" src="https://github.com/user-attachments/assets/be2e775d-d459-47d4-8e39-e1b2e3dffa7b" />
 
 
