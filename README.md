@@ -149,3 +149,4 @@ Systolic Array 기반 Convolution 최적화, PS–PL 간 AXI 인터페이스 설
 
 특히 시뮬레이션과 FPGA 사이에서 발생하는 동작 차이를 ILA로 분석하여 해결하는 과정에서  
 **시스템 레벨 디버깅 역량**을 크게 향상시킬 수 있었습니다.
+[종합설계_결과보고서.pdf](https://github.com/user-attachments/files/23657280/_.pdf)
